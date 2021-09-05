@@ -1,0 +1,80 @@
+:root {
+    --body-bg: #070724;
+    --text-color: #fff;
+    --mercury-tab-hover:#419EBB;
+    --planets-tab-active:#D8D8D8;
+    --venus-tab-hover:#EDA249;
+    --earth-tab-hover:#6D2ED5;
+    --mars-tab-hover:#D14C32;
+    --jupiter-tab-hover:#D83A34;
+    --saturn-tab-hover:#CD5120;
+    --uranus-tab-hover:#1EC1A2;
+    --neptune-tab-hover:#2D68F0;
+    --antonio-fonts: 'Antonio', 'Arial', sans-serif;
+    --spartan-stack: 'Spartan', 'Arial', sans-serif;
+}
+
+/* GENERAL */
+html {
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 25px;
+    font-family: var(--spartan-stack);
+    background-color: var(--body-bg);
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-container{
+    width: 100%;
+    max-width: 1410px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
