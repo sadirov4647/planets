@@ -78,3 +78,29 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+.header-title{
+    font-family: var(--antonio-fonts);
+    font-size: 28px;
+    line-height: 36px;
+    margin: 0;
+    margin-right: auto;
+}
+.tab-btns{
+    font-weight: bold;
+    font-size: 11px;
+line-height: 25px;
+background-color: transparent;
+color: var(--text-color);
+border: none;
+cursor: pointer;
+}
+.tab-btns:not(:last-child){
+    margin-right: 33px;
+}
+.site-header{
+    display: flex;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 27px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.212);
+}

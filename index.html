@@ -10,12 +10,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Spartan:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
 </head>
 
 <body>
-    <div class="header-container">
-        <h1>hello</h1>
+    <div id="app">
+        <div class="header-container">
+            <header class="site-header">
+                <h1 class="header-title">{{ message.toUpperCase() }}</h1>
+                <button class="tab-btns" v-for="planet in planets">{{ planet.toUpperCase() }}</button>
+            </header>
+
+        </div>
     </div>
+
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'the planets',
+                planets: ["mercury", "venus", "earth", "mars", "jupiter", "uranus", "neptune",]
+            }
+        })
+    </script>
+
 </body>
 
 </html>
