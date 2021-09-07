@@ -119,6 +119,9 @@ a {
     display: flex;
     justify-content: space-around;
 }
+.active{
+    color: var(--uranus-tab-hover);
+}
 .main-title{
     font-family: var(--antonio-fonts);
     font-weight: 400;
