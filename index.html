@@ -18,20 +18,46 @@
         <div class="header-container">
             <header class="site-header">
                 <h1 class="header-title">{{ message.toUpperCase() }}</h1>
-                <button class="tab-btns" v-for="planet in planets">{{ planet.toUpperCase() }}</button>
+                <ul class="header_list">
+                    <li class="header_list-item" v-for="planet in planets">
+                        <button class="tab-btns">{{ planet.toUpperCase() }}</button>
+                    </li>
+                </ul>
+
             </header>
 
+            <main class="site-main">
+                <div class="main-left">
+                    <img :src="mercury.image" alt="mercury" width="290" height="290">
+                </div>
+                <div class="main-right">
+                    <h1 class="main-title">{{ mercury.title }}</h1>
+                    <p class="main-para">{{ mercury.para }}</p>
+                    <span class="main-wiki">{{ mercury.wiki }}</span>
+                </div>
+
+            </main>
         </div>
     </div>
 
 
 
     <script>
+
         var app = new Vue({
             el: '#app',
             data: {
                 message: 'the planets',
-                planets: ["mercury", "venus", "earth", "mars", "jupiter", "uranus", "neptune",]
+                planets: ["mercury", "venus", "earth", "mars", "jupiter", "uranus", "neptune"],
+
+
+                mercury: {
+                    title: "Mercury",
+                    para: "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.",
+                    wiki: "Source : Wikipedia",
+                    image: "/images/mercury-first.png"
+                }
+
             }
         })
     </script>
