@@ -147,8 +147,10 @@ a {
 }
 .special_item{
     padding: 12px 28px;
-    background-color: var(--mercury-tab-hover);
     font-size: 12px;
+}
+.special_active{
+    background-color: var(--mercury-tab-hover);
 }
 .special_item:not(:last-child){
     margin-bottom: 16px;
