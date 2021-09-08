@@ -32,7 +32,8 @@
                     <h1 class="header-title">{{ message.toUpperCase() }}</h1>
                     <ul class="header_list">
                         <li class="header_list-item" v-for="(planet,index) in planets" :key="index">
-                            <span class="tab-btns" :class="{active: selectPlanet === planet}" @click="selectPlanet = planet">{{ planet.toUpperCase() }}</span>
+                            <span class="tab-btns"  :class="{active: selectPlanet === planet}" @click="selectPlanet = planet"
+                             :style="[selectPlanet === planet? {'color': allPlanets[planet].bgColor}: {color: '#fff'}]">{{ planet.toUpperCase() }}</span>
                         </li>
                     </ul>
                 </header>
@@ -80,6 +81,7 @@
                             title: "Mercury",
                             // para: "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.",
                             wiki: "Source : Wikipedia",
+                            bgColor: "#419EBB",
                             image: "/images/planets/mercuriy.png",
 
                             "overview": {
@@ -117,6 +119,7 @@
                             title: "Venus",
                             // para: "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty. As the brightest natural object in Earth's night sky after the Moon, Venus can cast shadows and can be, on rare occasions, visible to the naked eye in broad daylight.",
                             wiki: "Source : Wikipedia",
+                            bgColor: "#EDA249",
                             image: "/images/planets/venus.png",
 
                             "overview": {
@@ -153,6 +156,7 @@
                             title: "Earth",
                             // para: "Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth's surface is land with remaining 70.8% is covered with water. Earth's distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.",
                             wiki: "Source : Wikipedia",
+                            bgColor: "#6D2ED5",
                             image: "/images/planets/earth.png",
 
                             "overview": {
@@ -189,6 +193,7 @@
                             title: "Mars",
                             // para: "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the 'Red Planet'.",
                             wiki: "Source : Wikipedia",
+                            bgColor: "#D14C32",
                             image: "/images/planets/mars.png",
 
                             "overview": {
@@ -225,6 +230,7 @@
                             title: "Jupiter",
                             // para: "Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass two and a half times that of all the other planets in the Solar System combined, but less than one-thousandth the mass of the Sun.",
                             wiki: "Source : Wikipedia",
+                            bgColor: "#D83A34",
                             image: "/images/planets/jupiter.png",
 
                             "overview": {
@@ -261,6 +267,7 @@
                             title: "Saturn",
                             // para: "Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth. It only has one-eighth the average density of Earth.",
                             // wiki: "Source : Wikipedia",
+                            bgColor: "#CD5120",
                             image: "/images/planets/saturn.png",
 
                             "overview": {
@@ -297,6 +304,7 @@
                             title: "Uranus",
                             // para: "Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky, Uranus according to Greek mythology, was the great-grandfather of Ares. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System.",
                             wiki: "Source : Wikipedia",
+                            bgColor: "#1EC1A2",
                             image: "/images/planets/uranus.png",
 
                             "overview": {
@@ -333,6 +341,7 @@
                             title: "Neptune",
                             // para: "Neptune is the eighth and farthest-known Solar planet from the Sun. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, more massive than its near-twin Uranus.",
                             wiki: "Source : Wikipedia",
+                            bgColor: "#2D68F0",
                             image: "/images/planets/neptune.png",
 
                             "overview": {
