@@ -57,6 +57,14 @@
                             </ul>
                         </div>
                     </main>
+
+
+                    <ul class="planet_info">
+                        <li class="planet_info--item" v-for="info in infos">
+                            <span>{{ allPlanets[selectPlanet][info].infoText }}</span>
+                            <p class="planet_info--para">{{ allPlanets[selectPlanet][info].infoDeadline }}</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             `,
@@ -65,7 +73,7 @@
                     message: 'the planets',
                     planets: ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"],
                     additions: ["overview", "internal-structure", "surface-technology"],
-
+                    infos: ["rotation-time", "revolution-time", "radius", "average-temp"],
 
                     allPlanets: {
                         "mercury": {
@@ -85,7 +93,25 @@
                             "surface-technology": {
                                 desc: "Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s.",
                                 image: "/images/planets/mercuriy-structure.png"
-                            }
+                            },
+
+                            "rotation-time": {
+                                infoText: "Rotation Time",
+                                infoDeadline: "58.6 Days"
+                            },
+                            "revolution-time": {
+                                infoText: "Revolution Time",
+                                infoDeadline: "87.97 Days"
+                            },
+                            "radius": {
+                                infoText: "Radius",
+                                infoDeadline: "2,439.7 Km"
+                            },
+                            "average-temp": {
+                                infoText: "Average Temp",
+                                infoDeadline: "430 c"
+                            },
+
                         },
                         "venus": {
                             title: "Venus",
@@ -104,7 +130,24 @@
                             "surface-technology": {
                                 desc: "Much of the Venusian surface appears to have been shaped by volcanic activity. Venus has several times as many volcanoes as Earth, and it has 167 large volcanoes that are over 100 km (60 mi) across. The only volcanic complex of this size on Earth is the Big Island of Hawaii.",
                                 image: "/images/planets/venus-structure.png"
-                            }
+                            },
+
+                            "rotation-time": {
+                                infoText: "Rotation Time",
+                                infoDeadline: "243 Days"
+                            },
+                            "revolution-time": {
+                                infoText: "Revolution Time",
+                                infoDeadline: "224.7 Days"
+                            },
+                            "radius": {
+                                infoText: "Radius",
+                                infoDeadline: "6,051.8 Km"
+                            },
+                            "average-temp": {
+                                infoText: "Average Temp",
+                                infoDeadline: "471 c"
+                            },
                         },
                         "earth": {
                             title: "Earth",
@@ -123,7 +166,24 @@
                             "surface-technology": {
                                 desc: "Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth's surface is land with remaining 70.8% is covered with water. Earth's distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.",
                                 image: "/images/planets/earth-structure.png"
-                            }
+                            },
+
+                            "rotation-time": {
+                                infoText: "Rotation Time",
+                                infoDeadline: "0.99 Days"
+                            },
+                            "revolution-time": {
+                                infoText: "Revolution Time",
+                                infoDeadline: "366.26 Days"
+                            },
+                            "radius": {
+                                infoText: "Radius",
+                                infoDeadline: "6,371 Km"
+                            },
+                            "average-temp": {
+                                infoText: "Average Temp",
+                                infoDeadline: "16 c"
+                            },
                         },
                         "mars": {
                             title: "Mars",
@@ -142,7 +202,24 @@
                             "surface-technology": {
                                 desc: "Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt.",
                                 image: "/images/planets/mars-structure.png"
-                            }
+                            },
+
+                            "rotation-time": {
+                                infoText: "Rotation Time",
+                                infoDeadline: "1.03 Days"
+                            },
+                            "revolution-time": {
+                                infoText: "Revolution Time",
+                                infoDeadline: "1.88 Years"
+                            },
+                            "radius": {
+                                infoText: "Radius",
+                                infoDeadline: "3,389.5 Km"
+                            },
+                            "average-temp": {
+                                infoText: "Average Temp",
+                                infoDeadline: "-28 c"
+                            },
                         },
                         "jupiter": {
                             title: "Jupiter",
@@ -161,7 +238,24 @@
                             "surface-technology": {
                                 desc: "Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt.",
                                 image: "/images/planets/jupiter-structure.png"
-                            }
+                            },
+
+                            "rotation-time": {
+                                infoText: "Rotation Time",
+                                infoDeadline: "9.93 Hours"
+                            },
+                            "revolution-time": {
+                                infoText: "Revolution Time",
+                                infoDeadline: "11.86 Years"
+                            },
+                            "radius": {
+                                infoText: "Radius",
+                                infoDeadline: "69.911 Km"
+                            },
+                            "average-temp": {
+                                infoText: "Average Temp",
+                                infoDeadline: "-108 c"
+                            },
                         },
                         "saturn": {
                             title: "Saturn",
@@ -180,7 +274,24 @@
                             "surface-technology": {
                                 desc: "The best known feature of Jupiter is the Great Red Spot, a persistent anticyclonic storm located 22° south of the equator. It is known to have existed since at least 1831, and possibly since 1665.",
                                 image: "/images/planets/saturn-structure.png"
-                            }
+                            },
+
+                            "rotation-time": {
+                                infoText: "Rotation Time",
+                                infoDeadline: "10.8 Hours"
+                            },
+                            "revolution-time": {
+                                infoText: "Revolution Time",
+                                infoDeadline: "29.46 Years"
+                            },
+                            "radius": {
+                                infoText: "Radius",
+                                infoDeadline: "58.232 Km"
+                            },
+                            "average-temp": {
+                                infoText: "Average Temp",
+                                infoDeadline: "-138 c"
+                            },
                         },
                         "uranus": {
                             title: "Uranus",
@@ -199,7 +310,24 @@
                             "surface-technology": {
                                 desc: "The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% helium by volume. The planet's most famous feature is its prominent ring system, which is composed mostly of ice particles with a smaller amount of rocky debris and dust. ",
                                 image: "/images/planets/uranus-structure.png"
-                            }
+                            },
+
+                            "rotation-time": {
+                                infoText: "Rotation Time",
+                                infoDeadline: "17.2 Hours"
+                            },
+                            "revolution-time": {
+                                infoText: "Revolution Time",
+                                infoDeadline: "84 Years"
+                            },
+                            "radius": {
+                                infoText: "Radius",
+                                infoDeadline: "25,362 Km"
+                            },
+                            "average-temp": {
+                                infoText: "Average Temp",
+                                infoDeadline: "-195 c"
+                            },
                         },
                         "neptune": {
                             title: "Neptune",
@@ -218,7 +346,24 @@
                             "surface-technology": {
                                 desc: "The composition of Uranus's atmosphere is different from its bulk, consisting mainly of molecular hydrogen and helium. The helium molar fraction, i.e. the number of helium atoms per molecule of gas, is 0.15±0.03 in the upper troposphere.",
                                 image: "/images/planets/neptune-structure.png"
-                            }
+                            },
+
+                            "rotation-time": {
+                                infoText: "Rotation Time",
+                                infoDeadline: "16.08 Hours"
+                            },
+                            "revolution-time": {
+                                infoText: "Revolution Time",
+                                infoDeadline: "164.79 Years"
+                            },
+                            "radius": {
+                                infoText: "Radius",
+                                infoDeadline: "24,622 Km"
+                            },
+                            "average-temp": {
+                                infoText: "Average Temp",
+                                infoDeadline: "-201 c"
+                            },
                         },
                     },
 
