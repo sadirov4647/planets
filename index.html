@@ -29,12 +29,14 @@
             template: `
             <div class="header-container">
                 <header class="site-header">
-                    <h1 class="header-title">{{ message.toUpperCase() }}</h1>
-                    <img class="toggler-nav" src="/images/planets/nav.svg" alt="nav toogler" width="24" height="17">
-                    <ul class="header_list">
+                    <div class="top-header">
+                        <h1 class="header-title">{{ message.toUpperCase() }}</h1>
+                        <img class="toggler-nav" src="/images/planets/nav.svg" alt="nav toogler" width="24" height="17" @click="showNav = !showNav">
+                    </div>
+                    <ul class="header_list" :class="{'show-nav': showNav}">
                         <li class="header_list-item" v-for="(planet,index) in planets" :key="index">
                             <span class="tab-btns"  :class="{active: selectPlanet === planet}" @click="selectPlanet = planet"
-                             :style="[selectPlanet === planet? {'color': allPlanets[planet].bgColor}: {color: '#fff'}]">{{ planet.toUpperCase() }}</span>
+                            :style="[selectPlanet === planet? {'color': allPlanets[planet].bgColor}: {color: '#fff'}]">{{ planet.toUpperCase() }}</span>
                         </li>
                     </ul>
                 </header>
@@ -54,7 +56,7 @@
 
                             <ul class="special_list">
                                 <li class="special_item" v-for="(addition,index) in additions" :key="index" :class="{active: selectedSpecial  === addition}" @click="selectedSpecial = addition">
-                                    0{{ index + 1 }}  {{ addition }}
+                                    <span class="special-num">0{{ index + 1 }}</span>  {{ addition }}
                                 </li>
                             </ul>
                         </div>
@@ -378,7 +380,8 @@
                     },
 
                     selectPlanet: "mercury",
-                    selectedSpecial: "overview"
+                    selectedSpecial: "overview",
+                    showNav: false,
                 }
             },
         })
