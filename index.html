@@ -30,6 +30,7 @@
             <div class="header-container">
                 <header class="site-header">
                     <h1 class="header-title">{{ message.toUpperCase() }}</h1>
+                    <img class="toggler-nav" src="/images/planets/nav.svg" alt="nav toogler" width="24" height="17">
                     <ul class="header_list">
                         <li class="header_list-item" v-for="(planet,index) in planets" :key="index">
                             <span class="tab-btns"  :class="{active: selectPlanet === planet}" @click="selectPlanet = planet"
@@ -42,7 +43,7 @@
                 <div class="container">
                     <main class="site-main">
                         <div class="main-left">
-                            <img :src="allPlanets[selectPlanet][selectedSpecial].image" alt="mercury" width="290" height="290">
+                            <img class="main-left__img" :src="allPlanets[selectPlanet][selectedSpecial].image" alt="mercury" width="290" height="290">
                         </div>
                         <div class="main-right">
                             <div class="main-right__article">

@@ -38,6 +38,7 @@ body {
     font-family: var(--spartan-stack);
     background-color: var(--body-bg);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 img {
@@ -191,6 +192,10 @@ a {
     font-size: 40px;
     line-height: 52px;
     margin-bottom: 0;
+    margin-top: 15px;
+}
+.toggler-nav{
+    display: none;
 }
 
 @media only screen and (max-width: 900px) and (min-width: 821px) {
@@ -259,7 +264,60 @@ a {
 }
 
 @media only screen and (max-width: 650px) and (min-width: 320px) {
-    .container{
-        max-width: 327px;
+    .planet_info{
+        flex-direction: column;
+    }
+    .planet_info--item{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .planet_info--item:not(:last-child){
+        margin-bottom: 8px;
+        margin-right: 0;
+    }
+    .planet_info--para{
+        margin-top: 0;
+    }
+    .site-main{
+        flex-direction: column;
+    }
+    .site-header{
+        position: relative;
+    }
+    .special_list{
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        top: 85px;
+        justify-content: space-between;
+        padding-right: 80px;
+    }
+    .header_list{
+        display: none;
+    }
+    .special_item{
+        border: none;
+        font-size: 12px;
+        line-height: 10px;
+        padding: 0;
+    }
+    .special_item:not(:last-child){
+        margin-bottom: 0;
+    }
+    .main-right__article{
+        max-width: 100%;
+        text-align: center;
+    }
+    .main-left{
+        align-self: center;
+        margin-bottom: 50px;
+    }
+    .toggler-nav{
+        display: block;
     }
 }
