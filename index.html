@@ -35,7 +35,7 @@
                     </div>
                     <ul class="header_list" :class="{'show-nav': showNav}">
                         <li class="header_list-item" v-for="(planet,index) in planets" :key="index">
-                            <span class="tab-btns"  :class="{active: selectPlanet === planet}" @click="selectPlanet = planet"
+                            <span class="tab-btns" :class="{active: selectPlanet === planet}" @click="selectPlanet=planet, showNav=false"
                             :style="[selectPlanet === planet? {'color': allPlanets[planet].bgColor}: {color: '#fff'}]">{{ planet.toUpperCase() }}</span>
                         </li>
                     </ul>
@@ -383,7 +383,15 @@
                     selectedSpecial: "overview",
                     showNav: false,
                 }
+
             },
+            methods:{
+                planetChange(){
+                    selectPlanet=planet;
+                    document.querySelector(".header_list").classList.remove('show-nav')
+                }
+            }
+
         })
 
         var app = new Vue({
